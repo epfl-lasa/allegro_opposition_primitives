@@ -1,0 +1,49 @@
+primitives:
+  tsOfs12:
+    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
+    vf0_imp:    [0.5,          1.0,          1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'index_dist', 'index_mid', 'index_prox', 'middle_tip', 'middle_dist', 'middle_mid', 'middle_prox']
+    vf1_imp:    [0.5,         1.0,          1.0,          0.5,          0.5,          1.0,           1.0,          0.5]
+    vf1_focus:  1.0
+
+  tsOs1:
+    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
+    vf0_imp:    [1.0,          1.0,          0.7]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip_side', 'index_dist_side', 'index_mid_side', 'index_prox_side']
+    vf1_imp:    [0.5,               0.5,              1.0,              0.5]
+    vf1_focus:  1.0
+
+  pOfs123:
+    vf0_patch:  ['palm_idx_dgt', 'palm_mid_dgt', 'palm_pky_dgt']
+    vf0_imp:    [1.0,             1.0,            1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'middle_tip', 'pinky_tip', 'index_dist', 'middle_dist', 'pinky_dist', 'index_mid', 'middle_mid', 'pinky_mid', 'index_prox', 'middle_prox', 'pinky_prox']
+    vf1_imp:    [0.5,          0.5,          0.5,         1.0,          1.0,           1.0,          1.0,         1.0,          1.0,         0.2,          0.2,           0.2]    
+    vf1_focus:  1.0
+
+  ttOft12:
+    vf0_patch:  ['thumb_tip']
+    vf0_imp:    [1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'middle_tip']
+    vf1_imp:    [1.0, 1.0]
+    vf1_focus:  1.0
+
+grasps:
+  power_with_tip_stabilize:  
+    primitives: ['p0', 'p1']
+    p0: ['pOfs123', 0.4]
+    p1: ['tsOs1', 0.6]
+    preshape:   [-0.1899, 0.6539, 0.9680, 0.2804, -0.0304, 0.8662, 0.7655, 0.3115, 0.1869, 0.9993, 0.5279, 0.5170, 0.5868, 0.0578, 0.2973, 0.5017]
+
+  tsOs1:  
+    primitives: ['p0']
+    p0: ['tsOs1', 1.0]
+    preshape:   [-0.3414, 0.7958, 0.8839, 0.4828, -0.0993, 0.0676, 0.1418, -0.1764, 0.1909, 0.0660, 0.0320, 0.0919, 0.3249, 0.3364, 0.3335, 0.5276]
+
+  ttOft12:  
+    primitives: ['p0']
+    p0: ['ttOft12', 1.0]
+    preshape:   [0.1447, 0.7472, 0.6212, -0.1629, 0.2859, 0.8531, 0.5640, -0.0945, 0.1866, 0.0580, 0.0904, 0.0876, 1.2744, -0.1617, 0.0452, 0.4453]

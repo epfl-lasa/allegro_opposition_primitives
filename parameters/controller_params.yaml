@@ -1,0 +1,9 @@
+grav_comp_pose: [-0.03057, 1.4538, 0.2243, -0.3131, -0.03189, 1.3931, 0.3968, -0.2904, 0.1396, 1.4982, 0.1323, -0.2811, 1.3008, 0.0813, 0.1350, 0.3234]
+primitive_default_close_level        : 0.07
+primitive_default_squeeze_level      : 0.07
+maintain_kp_pos                      : 100.0
+maintain_kd_pos                      : 70.0
+maintain_kp_rot                      : 0.0
+maintain_kd_rot                      : 0.0
+contact_window_size                  : 30.0
+contact_interval                     : 0.2

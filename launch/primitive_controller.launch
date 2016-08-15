@@ -1,0 +1,40 @@
+<launch>
+
+  <arg name="HAND" default="left" />
+  <arg name="NUM" default="0" />
+  <arg name="CONTROLLER" default="pd2" /> <!-- to use: torque -->
+  <arg name="RESPAWN" default="true" />
+  <arg name="VISUALIZE" default="true" />
+  <arg name="ZEROS" default="$(find allegro_hand_parameters)/zero_files/zero_SAH020BL016.yaml" />
+  <arg name="AUTO_CAN" default="true" />  <!--If true, ignores CAN_DEVICE. -->
+  <arg name="CAN_DEVICE" default="/dev/pcanusb1" />
+  <arg name="JSP_GUI" default="false" />
+  <arg name="KEYBOARD" default="false" />
+  <arg name="GAZEBO" default="false" />  <!--use at your own risk-->
+  <arg name="PARAMS_DIR" default="$(find allegro_primitive_combinations)/parameters" />
+<!-- 
+  <node name="impedance_controller_test_$(arg HAND)_$(arg NUM)"
+        pkg="allegro_impedance_control_test"
+        type="allegro_impedance_control_test_node"
+        output="screen">
+
+    Remapping of topics into enumerated allegroHand_# namespace
+    <remap from="allegroHand/joint_states" to="allegroHand_$(arg NUM)/joint_states"/>
+    <remap from="allegroHand/torque_cmd" to="allegroHand_$(arg NUM)/torque_cmd"/>
+  </node>     -->
+
+  <node name="primitive_controller_$(arg HAND)_$(arg NUM)"        
+        pkg="allegro_primitive_combinations"
+        type="allegro_primitive_combinations_node"
+        output="screen">
+
+    <remap from="allegroHand/joint_states" to="allegroHand_$(arg NUM)/joint_states"/>
+    <remap from="allegroHand/torque_cmd" to="allegroHand_$(arg NUM)/torque_cmd"/>
+    <remap from="allegroHand/joint_cmd" to="allegroHand_$(arg NUM)/joint_cmd"/>
+    <remap from="allegroHand/lib_cmd" to="allegroHand_$(arg NUM)/lib_cmd"/>    
+
+    <rosparam file="$(arg PARAMS_DIR)/controller_params.yaml" command="load" />  
+  </node>    
+
+  <rosparam file="$(arg PARAMS_DIR)/primitive_grasp_definitions.yaml" command="load" />  
+</launch>
