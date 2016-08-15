@@ -1,0 +1,20 @@
+<launch>
+  <arg name="HAND" default="left" />
+  <arg name="NUM" default="0" />
+  <arg name="PARAMS_DIR" default="$(find allegro_opposition_primitives)/parameters" />
+
+  <node name="opposition_controller_$(arg HAND)_$(arg NUM)"
+        pkg="allegro_opposition_primitives"
+        type="allegro_opposition_primitives_node"
+        output="screen">
+
+    <remap from="allegroHand/joint_states" to="allegroHand_$(arg NUM)/joint_states"/>
+    <remap from="allegroHand/torque_cmd" to="allegroHand_$(arg NUM)/torque_cmd"/>
+    <remap from="allegroHand/joint_cmd" to="allegroHand_$(arg NUM)/joint_cmd"/>
+    <remap from="allegroHand/lib_cmd" to="allegroHand_$(arg NUM)/lib_cmd"/>    
+
+    <rosparam file="$(arg PARAMS_DIR)/controller_params.yaml" command="load" />  
+  </node>    
+
+  <rosparam file="$(arg PARAMS_DIR)/primitive_grasp_definitions.yaml" command="load" />  
+</launch>

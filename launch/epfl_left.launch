@@ -2,7 +2,7 @@
 
   <arg name="HAND" default="left" />
   <arg name="NUM" default="0" />
-  <arg name="CONTROLLER" default="torque" /> <!-- to use: torque -->
+  <arg name="CONTROLLER" default="pd" /> <!-- to use: torque -->
   <arg name="RESPAWN" default="true" />
   <arg name="VISUALIZE" default="true" />
   <arg name="ZEROS" default="$(find allegro_hand_parameters)/zero_files/zero_SAH020BL016.yaml" />
@@ -25,15 +25,5 @@
     <arg name="KEYBOARD" value="$(arg KEYBOARD)"/>
     <arg name="GAZEBO" value="$(arg GAZEBO)"/>
   </include>
-
-<!--   <node name="impedance_controller_test_$(arg HAND)_$(arg NUM)"
-        pkg="allegro_impedance_control_test"
-        type="allegro_impedance_control_test_node"
-        output="screen">
-
-    Remapping of topics into enumerated allegroHand_# namespace
-    <remap from="allegroHand/joint_states" to="allegroHand_$(arg NUM)/joint_states"/>
-    <remap from="allegroHand/torque_cmd" to="allegroHand_$(arg NUM)/torque_cmd"/>
-  </node>     -->
-
+  
 </launch>
