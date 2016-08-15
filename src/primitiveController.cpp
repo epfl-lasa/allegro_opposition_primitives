@@ -73,7 +73,7 @@ void Executive::initController() {
     graspName = "";
 
     // Dyn parameters callback  (must be done last because we will receive a callback as soon as the server is started
-    dyn_reconf_server          = new dynamic_reconfigure::Server<my_msgs::my_dyn_paramsConfig>();
+    dyn_reconf_server          = new dynamic_reconfigure::Server<allegro_opposition_primitives::my_dyn_paramsConfig>();
     dyn_reconf_callback_binded = boost::bind(&Executive::reconfigureCallback, this, _1, _2);
     dyn_reconf_server->setCallback(dyn_reconf_callback_binded);
 }
@@ -197,7 +197,7 @@ bool Executive::populateGrasp(std::string grasp_name) {
     return true;
 }
 
-void Executive::reconfigureCallback(my_msgs::my_dyn_paramsConfig& config, uint32_t level) {
+void Executive::reconfigureCallback(allegro_opposition_primitives::my_dyn_paramsConfig& config, uint32_t level) {
     // std::cerr << "Grasp: " << config.grasp << std::endl;
     std_msgs::String cmd;
     cmd.data = "grasp " + config.grasp;

@@ -16,10 +16,15 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   tf
-  eigen_conversions
-  my_msgs
+  eigen_conversions  
+  dynamic_reconfigure
   message_generation
+  geometry_msgs
+  sensor_msgs
+  std_msgs
 )
+
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -97,10 +102,11 @@ find_package(orocos_kdl REQUIRED)
 ##     and list every .cfg file to be processed
 
 ## Generate dynamic reconfigure parameters in the 'cfg' folder
-# generate_dynamic_reconfigure_options(
-#   cfg/DynReconf1.cfg
+generate_dynamic_reconfigure_options(
+    cfg/my_dyn_params.cfg
 #   cfg/DynReconf2.cfg
-# )
+)
+
 
 ###################################
 ## catkin specific configuration ##
@@ -114,9 +120,10 @@ find_package(orocos_kdl REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
 #  LIBRARIES ${PROJECT_NAME}
-  CATKIN_DEPENDS allegro_hand_controllers allegro_hand_description allegro_hand_driver allegro_hand_parameters impedance_controller eigen_conversions roscpp rospy
+  CATKIN_DEPENDS message_runtime dynamic_reconfigure allegro_hand_controllers allegro_hand_description allegro_hand_driver allegro_hand_parameters impedance_controller eigen_conversions roscpp rospy
   DEPENDS system_lib Eigen
 )
+
 
 ###########
 ## Build ##
@@ -147,7 +154,7 @@ FILE(GLOB theIncludeFiles include/*.h)
 add_executable(allegro_opposition_primitives_node ${theSourceFiles} ${theIncludeFiles})
 
 # Not sure if it should stay here
-add_dependencies(allegro_opposition_primitives_node my_msgs_gencfg)
+add_dependencies(allegro_opposition_primitives_node allegro_opposition_primitives_gencfg)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above

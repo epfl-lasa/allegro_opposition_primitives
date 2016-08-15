@@ -14,7 +14,7 @@
 #include "utils.h"
 
 #include <dynamic_reconfigure/server.h>
-#include <my_msgs/my_dyn_paramsConfig.h>
+#include <allegro_opposition_primitives/my_dyn_paramsConfig.h>
 
 class CloseController;
 enum eControllerState {
@@ -78,7 +78,7 @@ private:
     bool initPrimitiveDefinition(std::string primitive_name, PrimitiveDefinition& def);
     bool populateGrasp(std::string grasp_name);
     void transformPatchNames(std::vector<std::string>& names);
-    void reconfigureCallback(my_msgs::my_dyn_paramsConfig& config, uint32_t level);
+    void reconfigureCallback(allegro_opposition_primitives::my_dyn_paramsConfig& config, uint32_t level);
     void initGravCompHack();
     void goToHome();
 
@@ -86,8 +86,8 @@ private:
     void disableJointControl() { cntrl_joint_state.position.clear(); }
     bool inJointControlMode() { return cntrl_joint_state.position.size() == DOF_JOINTS; }
 
-    dynamic_reconfigure::Server<my_msgs::my_dyn_paramsConfig> *dyn_reconf_server;
-    dynamic_reconfigure::Server<my_msgs::my_dyn_paramsConfig>::CallbackType dyn_reconf_callback_binded;
+    dynamic_reconfigure::Server<allegro_opposition_primitives::my_dyn_paramsConfig> *dyn_reconf_server;
+    dynamic_reconfigure::Server<allegro_opposition_primitives::my_dyn_paramsConfig>::CallbackType dyn_reconf_callback_binded;
 
 };
 
