@@ -23,11 +23,41 @@ The launch file [opposition_controller_with_hand.launch](launch/opposition_contr
 
 	roslaunch allegro_opposition_primitives opposition_controller_with_hand.launch
 
-Alternatively, if you want the keyboard controls provided by the allegro-hand-ros package, you can start these independently in different terminal windows:
+Alternatively, if you want the keyboard controls provided by the allegro-hand-ros package, you can start the nodes independently in different terminal windows:
 
 	roslaunch allegro_opposition_primitives epfl_left.launch HAND:=right KEYBOARD:=true
 	roslaunch allegro_opposition_primitives opposition_controller_alone.launch
 
+
+Gui control
+-----------
+Run-time control of the chosen primitive is provided through the dynamic reconfigure gui. After running the allegro_opposition_primitives node, run the dynamic reconfigure client. 
+
+	rosrun rqt_reconfigure rqt_reconfigure 
+
+You should be presented with the following GUI.
+
+You can then:
+- **chose grasp**
+- **open / close** the hand
+- **choose the active opposition:** Choosing a number greater than the number of oppositions comprising the grasp will choose all oppositions.
+- **vary squeeze level** 
+
+
+Topic based control
+--------------------
+- how to select the grasp
+- how to open/close
+- how to vary the squeeze programmatically.
+
+
+Predefined grasps
+-----------------
+The package predefines a set of grasps which can be selected for execution according to the task being performed. These are shown below.
+
+
+Defining new grasps
+-------------------
 
 
 
