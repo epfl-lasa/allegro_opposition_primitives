@@ -41,14 +41,16 @@ You should be presented with the following GUI.
 You can then:
 - **chose grasp**
 - **open / close** the hand
-- **choose the active opposition:** Choosing a number greater than the number of oppositions comprising the grasp will choose all oppositions.
-- **specify importance of a primitive**
+- **choose the active primitive:** Choosing a number greater than the number of oppositions comprising the grasp will choose all oppositions.
+- **specify importance of a primitive** in the grasp.
 - **influence speed of closing**
 - **vary the squeeze level** 
 
 
 Topic based control
 --------------------
+Grasp control is achieved by sending an `std_msgs::String` message on the topic `allegroHand/primitive_control_cmd`. Recognized strings are listed below.
+- `grasp <grasp_name>` specifies the grasp to be controlled. Valid grasp names are defined in [primitive_grasp_definitions.yaml](parameters/primitive_grasp_definitions.yaml).
 - how to select the grasp
 - how to open/close
 - how to vary the squeeze programmatically.
