@@ -66,6 +66,34 @@ The package predefines a set of grasps which can be selected for execution accor
 Defining new grasps
 -------------------
 
+New grasps are defined in [primitive_grasp_definitions.yaml](parameters/primitive_grasp_definitions.yaml). 
+
+A `primitives` section at the begining of the file defines single-opposition primitives. For example, consider a primitive made up of thumb surface acting against frontal surfaces of fingers 1 and 2. Let this primitive be named `tsOfs12`. It is defined as follows.
+
+  tsOfs12:
+    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
+    vf0_imp:    [0.5,          1.0,          1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'index_dist', 'index_mid', 'index_prox', 'middle_tip', 'middle_dist', 'middle_mid', 'middle_prox']
+    vf1_imp:    [0.5,         1.0,          1.0,          0.5,          0.5,          1.0,           1.0,          0.5]
+    vf1_focus:  1.0
+
+A primitive is made of up 2 virtual fingers `vf0`, `vf1`. Each virtual finger defines 
+- **vfX_patch** the grasping patches that cooperate in applying an opposing force.  A complete list of grasping patches can be found in [patchInfo.cpp](src/patchInfo.cpp).
+- **vfX_imp** hint on the distribution of force among the patches indicating where is the pressure focussed. Each patch is assigned a value between 0 and 1.
+- **vfX_focus** the threshold value for patches to be considered as the focus of pressure.
+
+The `grasps` section follows the `primitives` section. It defines grasps as being composed from one or more cooperating primitives. For example, consider a grasp composed of frontal fingers 2 and 3 acting against the palm (primitive `pOfs23`) and thumb surface against side of finger 1. We may call this a `power_with_tip_stabilize` grasp. It is defined as follows.
+
+  power_with_tip_stabilize:  
+    primitives: ['p0', 'p1']
+    p0: ['pOfs123', 0.4]
+    p1: ['tsOs1', 0.6]
+    preshape:   [-0.1899, 0.6539, 0.9680, 0.2804, -0.0304, 0.8662, 0.7655, 0.3115, 0.1869, 0.9993, 0.5279, 0.5170, 0.5868, 0.0578, 0.2973, 0.5017]
+
+- **primitives** specify the number of primitives making up the grasp using identifier `p0`, `p1`, `p2`, etc.
+- **pX** indicates the primitive name associated with each identifier and the importance of this primitive in the grasp.
+- **preshape** is the starting pose of the hand before closure. The hand can be put in the appropriate pose using the gravity compensation mode `'Z'` available with the `grasp` controller of the [allegro-hand-ros package](https://github.com/felixduvallet/allegro-hand-ros) package. The `/allegroHand/joint_states` topic gives the preshape joint vector.
 
 
 
