@@ -25,5 +25,5 @@
     <arg name="KEYBOARD" value="$(arg KEYBOARD)"/>
     <arg name="GAZEBO" value="$(arg GAZEBO)"/>
   </include>
-  
+
 </launch>

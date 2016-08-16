@@ -1,5 +1,6 @@
 <launch>
   <include file="$(find allegro_opposition_primitives)/launch/epfl_right.launch"/>
+  <!-- <include file="$(find allegro_opposition_primitives)/launch/epfl_left.launch"/>  -->
   <arg name="PARAMS_DIR" default="$(find allegro_opposition_primitives)/parameters" />
 
   <node name="opposition_controller_$(arg HAND)_$(arg NUM)"
