@@ -7,3 +7,11 @@ maintain_kp_rot                      : 0.0
 maintain_kd_rot                      : 0.0
 contact_window_size                  : 30.0
 contact_interval                     : 0.2
+
+grasp                                : "grasp_none"
+close                                : false
+primitive                            : 0
+mix_factor                           : 1
+close_level                          : 0.07
+squeeze_level                        : 0.07
+

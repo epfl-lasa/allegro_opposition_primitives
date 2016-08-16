@@ -1,4 +1,4 @@
-#include "primitiveController.h"
+#include "executive.h"
 #include "primitive.h"
 #include "parameters.h"
 
@@ -345,7 +345,7 @@ void Executive::updateController() {
 
     if (inJointControlMode()) {
         for (int i=0; i<DOF_JOINTS; i++) {
-            cntrl_joint_state.effort[i] = 0;
+//            cntrl_joint_state.effort[i] = 0;
             cntrl_joint_state.position[i] = preshape[i];
         }
     }

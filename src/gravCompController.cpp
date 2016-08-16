@@ -1,4 +1,4 @@
-#include "primitiveController.h"
+#include "executive.h"
 
 GravCompController::GravCompController(Executive *ce, Primitive *primitive)
     : ControlPrimitiveBase(ce, primitive) {

@@ -82,8 +82,8 @@ private:
     void initGravCompHack();
     void goToHome();
 
-    void enableJointControl() { cntrl_joint_state.position.resize(DOF_JOINTS); }
-    void disableJointControl() { cntrl_joint_state.position.clear(); }
+    void enableJointControl() { cntrl_joint_state.position.resize(DOF_JOINTS); cntrl_joint_state.effort.clear(); }
+    void disableJointControl() { cntrl_joint_state.position.clear(); cntrl_joint_state.effort.resize(DOF_JOINTS); }
     bool inJointControlMode() { return cntrl_joint_state.position.size() == DOF_JOINTS; }
 
     dynamic_reconfigure::Server<allegro_opposition_primitives::my_dyn_paramsConfig> *dyn_reconf_server;
