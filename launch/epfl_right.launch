@@ -2,7 +2,7 @@
 
   <arg name="HAND" default="right" />
   <arg name="NUM" default="1" />
-  <arg name="CONTROLLER" default="pd" /> 
+  <arg name="CONTROLLER" default="pd2" /> 
   <arg name="RESPAWN" default="true" />
   <arg name="VISUALIZE" default="true" />
   <arg name="ZEROS" default="$(find allegro_hand_parameters)/zero_files/zero_SAH020BR012.yaml" />
