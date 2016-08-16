@@ -51,9 +51,9 @@ Topic based control
 --------------------
 Grasp control is achieved by sending an `std_msgs::String` message on the topic `allegroHand/primitive_control_cmd`. Recognized strings are listed below.
 - `grasp <grasp_name>` specifies the grasp to be controlled. Valid grasp names are defined in [primitive_grasp_definitions.yaml](parameters/primitive_grasp_definitions.yaml).
-- how to select the grasp
-- how to open/close
-- how to vary the squeeze programmatically.
+- `home` resets the hand to the default home position. 
+- `open`, `close` opens and closes the hand according to the oppositional intentions defined in the grasp.
+- `sq <num> <value>` prescribes a squeeze level <value> for the primitive <num>. If <num> is greater than the number of oppositions comprising the grasp, <value> is applied to all oppositions.
 
 
 Predefined grasps
