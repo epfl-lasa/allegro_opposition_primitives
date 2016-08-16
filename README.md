@@ -1,6 +1,6 @@
 allegro_opposition_primitives
 =============================
-This package implements a grasp controller for opposition primitives. A single opposition primitive represents a subset of grasping patches that are set up into 2 opposing groups for the purpose of applying oppositional pressure on a grasped object. A grasping patch denotes a contiguous surface of the hand acting in unison to exert a grasping force. A grasp can contain one or more opposition primitives.
+This package implements a grasp controller for opposition primitives. A single opposition primitive represents a subset of grasping patches that are set up into 2 opposing groups for the purpose of applying oppositional pressure on a grasped object. A grasping patch denotes a contiguous surface of the hand acting in unison to exert a grasping force. For example frontal or side surface of a single phalange. A grasp can contain one or more opposition primitives.
 
 This package provides a set of predefined grasps, with commands to open and close the hand according to the oppositional intention. Additionally, the sequeezing level along each axis of opposition can be independently or jointly specified.
 
@@ -11,7 +11,7 @@ The package provides a gui interface and a topic-based interface to control the 
 Dependencies
 ------------
 
-This package depends on the [allegro-hand-ros package][1]. 
+This package depends on the [allegro-hand-ros][1] package. 
 
 [1]: https://github.com/felixduvallet/allegro-hand-ros
 
@@ -93,7 +93,7 @@ The `grasps` section follows the `primitives` section. It defines grasps as bein
 
 - **primitives:** the number of primitives making up the grasp using identifier `p0`, `p1`, `p2`, etc.
 - **pX:** the primitive name associated with each identifier and the importance of this primitive in the grasp.
-- **preshape:** the starting pose of the hand before closure. The hand can be put in the appropriate pose using the gravity compensation mode `'Z'` available with the `grasp` controller of the [allegro-hand-ros package](https://github.com/felixduvallet/allegro-hand-ros) package. The `/allegroHand/joint_states` topic gives the preshape joint vector.
+- **preshape:** the starting pose of the hand before closure. The hand can be put in the appropriate pose using the gravity compensation mode `'Z'` available with the `grasp` controller of the [allegro-hand-ros](https://github.com/felixduvallet/allegro-hand-ros) package. The `/allegroHand/joint_states` topic gives the preshape joint vector.
 
 
 
