@@ -21,11 +21,11 @@ Launch
 
 The launch file [opposition_controller_with_hand.launch](launch/opposition_controller_with_hand.launch) can be used to launch both the opposition controller node and the underlying allegro pd-control node.
 
-	roslaunch allegro_opposition_primitives opposition_controller_with_hand.launch
+	roslaunch allegro_opposition_primitives opposition_controller_with_hand.launch HAND:=right NUM:=1
 
 Alternatively, if you want the keyboard controls provided by the allegro-hand-ros package, you can start the nodes independently in different terminal windows:
 
-	roslaunch allegro_opposition_primitives epfl_right.launch KEYBOARD:=true
+	roslaunch allegro_opposition_primitives epfl_hand.launch HAND:=right NUM:=1 KEYBOARD:=true
 	roslaunch allegro_opposition_primitives opposition_controller_alone.launch HAND:=right NUM:=1
 
 
@@ -53,16 +53,19 @@ Grasp control is achieved by sending an `std_msgs::String` message on the topic 
 - `grasp <grasp_name>` specifies the grasp to be controlled. Valid grasp names are defined in [primitive_grasp_definitions.yaml](parameters/primitive_grasp_definitions.yaml).
 - `home` resets the hand to the default home position. 
 - `open`, `close` opens and closes the hand according to the oppositional intentions defined in the grasp.
-- `sq <num> <value>` prescribes a squeeze level <value> for the primitive <num>. If <num> is greater than the number of oppositions comprising the grasp, <value> is applied to all oppositions.
+- `sq <num> <value>` prescribes a squeeze level `value` for the primitive `num`. If `num` is greater than the number of oppositions comprising the grasp, `value` is applied to all oppositions.
 
 
 Predefined grasps
 -----------------
 The package predefines a set of grasps which can be selected for execution according to the task being performed. These are shown below.
 
+- put the image here, the human hand demonstrating the grasp. the corresponding grasp with the allegro hand.
+
 
 Defining new grasps
 -------------------
+
 
 
 
