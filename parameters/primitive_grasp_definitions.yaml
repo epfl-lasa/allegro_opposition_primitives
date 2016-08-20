@@ -1,28 +1,12 @@
 primitives:
-  tsOfs12:
-    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
-    vf0_imp:    [0.5,          1.0,          1.0]
+  ttOft1:
+    vf0_patch:  ['thumb_tip', 'thumb_dist']
+    vf0_imp:    [1.0,  1.0]
     vf0_focus:  1.0
-    vf1_patch:  ['index_tip', 'index_dist', 'index_mid', 'index_prox', 'middle_tip', 'middle_dist', 'middle_mid', 'middle_prox']
-    vf1_imp:    [0.5,         1.0,          1.0,          0.5,          0.5,          1.0,           1.0,          0.5]
+    vf1_patch:  ['index_tip']
+    vf1_imp:    [1.0]
     vf1_focus:  1.0
-
-  tsOs1:
-    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
-    vf0_imp:    [1.0,          1.0,          0.7]
-    vf0_focus:  1.0
-    vf1_patch:  ['index_tip_side', 'index_dist_side', 'index_mid_side', 'index_prox_side']
-    vf1_imp:    [0.5,               0.5,              1.0,              0.5]
-    vf1_focus:  1.0
-
-  pOfs123:
-    vf0_patch:  ['palm_idx_dgt', 'palm_mid_dgt', 'palm_pky_dgt']
-    vf0_imp:    [1.0,             1.0,            1.0]
-    vf0_focus:  1.0
-    vf1_patch:  ['index_tip', 'middle_tip', 'pinky_tip', 'index_dist', 'middle_dist', 'pinky_dist', 'index_mid', 'middle_mid', 'pinky_mid', 'index_prox', 'middle_prox', 'pinky_prox']
-    vf1_imp:    [0.5,          0.5,          0.5,         1.0,          1.0,           1.0,          1.0,         1.0,          1.0,         0.2,          0.2,           0.2]    
-    vf1_focus:  1.0
-
+ 
   ttOft12:
     vf0_patch:  ['thumb_tip']
     vf0_imp:    [1.0]
@@ -31,19 +15,241 @@ primitives:
     vf1_imp:    [1.0, 1.0]
     vf1_focus:  1.0
 
+  ft1Os2tip:
+    vf0_patch:  ['index_tip']
+    vf0_imp:    [1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['middle_tip_side', middle_dist_side]
+    vf1_imp:    [1.0, 1.0]
+    vf1_focus:  1.0
+
+  ttOs2tip:
+    vf0_patch:  ['thumb_tip', 'thumb_dist']
+    vf0_imp:    [1.0,          1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['middle_tip_side', 'middle_dist_side']
+    vf1_imp:    [1.0,               1.0]
+    vf1_focus:  1.0
+
+  ttOs1:
+    vf0_patch:  ['thumb_tip', 'thumb_dist']
+    vf0_imp:    [1.0,          1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip_side', 'index_dist_side', 'index_mid_side', 'index_prox_side']
+    vf1_imp:    [0.5,               0.5,              1.0,              0.5]
+    vf1_focus:  1.0
+
+  tsOs1:
+    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
+    vf0_imp:    [1.0,          1.0,         1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip_side', 'index_dist_side', 'index_mid_side', 'index_prox_side']
+    vf1_imp:    [0.5,               0.5,              1.0,              0.5]
+    vf1_focus:  1.0
+
+  tsOs2:
+    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
+    vf0_imp:    [0.8,          1.0,         0.8]
+    vf0_focus:  1.0
+    vf1_patch:  ['middle_tip_side', 'middle_dist_side', 'middle_mid_side', 'middle_prox_side']
+    vf1_imp:    [0.5,               0.5,              1.0,              0.5]
+    vf1_focus:  1.0
+
+  tsOs3:
+    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
+    vf0_imp:    [0.8,          1.0,         0.8]
+    vf0_focus:  1.0
+    vf1_patch:  ['pinky_tip_side', 'pinky_dist_side', 'pinky_mid_side', 'pinky_prox_side']
+    vf1_imp:    [0.5,               0.5,              1.0,              0.5]
+    vf1_focus:  1.0
+
+  ttOft2:
+    vf0_patch:  ['thumb_tip', 'thumb_dist']
+    vf0_imp:    [1.0,          1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['middle_tip']
+    vf1_imp:    [1.0]
+    vf1_focus:  1.0
+
+  tsOfs123:
+    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
+    vf0_imp:    [0.5,          1.0,          1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'index_dist', 'index_mid', 'index_prox', 'middle_tip', 'middle_dist', 'middle_mid', 'middle_prox', 'pinky_tip', 'pinky_dist', 'pinky_mid', 'pinky_prox']
+    vf1_imp:    [0.5,         1.0,          1.0,          0.5,          0.5,          1.0,           1.0,          0.5,           0.5,          1.0,           1.0,          0.5]
+    vf1_focus:  1.0
+
+  tsOfs12:
+    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
+    vf0_imp:    [0.5,          1.0,          1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'index_dist', 'index_mid', 'index_prox', 'middle_tip', 'middle_dist', 'middle_mid', 'middle_prox']
+    vf1_imp:    [0.5,         1.0,          1.0,          0.5,          0.5,          1.0,           1.0,          0.5]
+    vf1_focus:  1.0
+
+  tsOfs1:
+    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
+    vf0_imp:    [0.5,          1.0,          1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'index_dist', 'index_mid', 'index_prox']
+    vf1_imp:    [0.5,         1.0,          1.0,          0.5]
+    vf1_focus:  1.0
+
+  ttOp:
+    vf0_patch:  ['thumb_tip']
+    vf0_imp:    [1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['palm_idx_wrst', 'palm_mid_wrst']
+    vf1_imp:    [1.0,             1.0]    
+    vf1_focus:  1.0
+
+  pOft123:
+    vf0_patch:  ['palm_idx_dgt', 'palm_mid_dgt', 'palm_pky_dgt']
+    vf0_imp:    [1.0,             1.0,            1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'middle_tip', 'pinky_tip']
+    vf1_imp:    [1.0,          1.0,          1.0]    
+    vf1_focus:  1.0
+
+  pOft12:
+    vf0_patch:  ['palm_idx_dgt', 'palm_mid_dgt']
+    vf0_imp:    [1.0,             1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'middle_tip']
+    vf1_imp:    [1.0,          1.0]    
+    vf1_focus:  1.0
+
+  pOfs23:
+    vf0_patch:  ['palm_mid_wrst', 'palm_pky_wrst']
+    vf0_imp:    [1.0,             1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['middle_tip', 'pinky_tip', 'middle_dist', 'pinky_dist', 'middle_mid', 'pinky_mid', 'middle_prox', 'pinky_prox']
+    vf1_imp:    [0.5,          0.5,         1.0,           1.0,          1.0,          1.0,          0.2,            0.2]    
+    vf1_focus:  1.0
+
+  pOfs1:
+    vf0_patch:  ['palm_idx_dgt']
+    vf0_imp:    [1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'index_dist', 'index_mid', 'index_prox']
+    vf1_imp:    [1.0,         1.0,           0.8,         0.2]
+    vf1_focus:  1.0
+
+  pOfs12:
+    vf0_patch:  ['palm_mid_wrst']
+    vf0_imp:    [1.0]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip', 'index_dist', 'index_mid', 'index_prox', 'middle_tip', 'middle_dist', 'middle_mid', 'middle_prox']
+    vf1_imp:    [1.0,         1.0,           0.8,         0.2,          1.0,         1.0,           0.8,          0.2]
+    vf1_focus:  1.0
+
+  tsOs12:
+    vf0_patch:  ['thumb_tip', 'thumb_dist', 'thumb_mid']
+    vf0_imp:    [1.0,          1.0,         0.5]
+    vf0_focus:  1.0
+    vf1_patch:  ['index_tip_side', 'index_dist_side', 'index_mid_side', 'index_prox_side', 'middle_tip_side', 'middle_dist_side', 'middle_mid_side', 'middle_prox_side']
+    vf1_imp:    [1.0,               1.0,              1.0,              1.0,                1.0,               1.0,              0.2,              0.2]
+    vf1_focus:  1.0
+
+
 grasps:
-  power_with_tip_stabilize:  
-    primitives: ['p0', 'p1']
-    p0: ['pOfs123', 0.4]
-    p1: ['tsOs1', 0.6]
-    preshape:   [-0.1899, 0.6539, 0.9680, 0.2804, -0.0304, 0.8662, 0.7655, 0.3115, 0.1869, 0.9993, 0.5279, 0.5170, 0.5868, 0.0578, 0.2973, 0.5017]
-
-  tsOs1:  
-    primitives: ['p0']
-    p0: ['tsOs1', 1.0]
-    preshape:   [-0.3414, 0.7958, 0.8839, 0.4828, -0.0993, 0.0676, 0.1418, -0.1764, 0.1909, 0.0660, 0.0320, 0.0919, 0.3249, 0.3364, 0.3335, 0.5276]
-
-  ttOft12:  
+  p0_ttOft12: # precision pinch
     primitives: ['p0']
     p0: ['ttOft12', 1.0]
-    preshape:   [0.1447, 0.7472, 0.6212, -0.1629, 0.2859, 0.8531, 0.5640, -0.0945, 0.1866, 0.0580, 0.0904, 0.0876, 1.2744, -0.1617, 0.0452, 0.4453]
+    preshape: [0.1447, 0.7472, 0.6212, -0.1629, 0.2859, 0.8531, 0.5640, -0.0945, 0.1866, 0.0580, 0.0904, 0.0876, 1.2744, -0.1617, 0.0452, 0.4453]
+
+  p0_ttOs2tip/p1_ttOft1/p2_ft1Os2:  # writing tripod
+    primitives: ['p0', 'p1', 'p2']
+    p0: ['ttOs2tip', 0.6]
+    p1: ['ttOft1', 0.4]
+    p2: ['ft1Os2tip', 0.4]
+    preshape:   [0.2209, 0.5284, 1.2187, -0.3176, -0.0030, 1.3956, 0.6291, 0.6292, -0.2914, 1.6189, 1.2311, 0.1695, 0.6076, 0.7650, 0.6211, 0.2916]
+
+  p0_ttOs1/p1_ttOft2:  # precision tapping
+    primitives: ['p0', 'p1']
+    p0: ['ttOs1', 0.6]
+    p1: ['ttOft2', 0.4]
+    preshape:   [-0.5591, 1.0630, 1.6305, 0.9869, -0.5338, 1.6416, 0.6599, 0.2963, -0.3324, 1.6000, 1.2097, 0.1236, 1.0598, 0.4564, -0.1174, 0.9518]
+    
+  p0_tsOfs123/p1_ttOp/p2_pOft123: # power cylinder 3 finger
+    primitives: ['p0', 'p1', 'p2']
+    p0: ['tsOfs123', 0.5]
+    p1: ['ttOp', 0.5]
+    p2: ['pOft123', 0.5]
+    preshape:   [0.1582, 0.9154, 0.0833, -0.3118, 0.1360, 1.0235, 0.0300, -0.2875, 0.2875, 1.1680, -0.1450, -0.2828, 1.4967, -0.0599, -0.2579, 0.2635]
+
+  p0_tsOfs12/p1_ttOp/p2_pOft12:  # power cylinder 2 finger
+    primitives: ['p0', 'p1', 'p2']
+    p0: ['tsOfs12', 0.5]
+    p1: ['ttOp', 0.5]
+    p2: ['pOft12', 0.5]
+    preshape:   [0.5517, 0.8798, 0.2215, -0.0442, 0.3224, 1.0604, 0.2192, -0.1603, 0.0384, 1.2088, 0.5971, 0.3947, 1.0227, 0.0063, 0.1257, 0.1245]
+
+  p0_pOft123/p1_ttOp/p2_tsOfs123:  # spherical power frontal 3 finger
+    primitives: ['p0', 'p1', 'p2']
+    p0: ['pOft123', 0.5]
+    p1: ['ttOp', 0.5]
+    p2: ['tsOfs123', 0.5]
+    preshape:   [0.2532, 0.3285, 1.0335, 0.6967, 0.1241, 0.5957, 0.3763, 0.9291, 0.2701, 0.6934, 0.7054, 0.3968, 1.2149, 0.1163, -0.2161, 0.8199]
+
+  p0_pOft12/p1_ttOp/p2_tsOfs12:  # spherical power frontal 2 finger
+    primitives: ['p0', 'p1', 'p2']
+    p0: ['pOft12', 0.5]
+    p1: ['ttOp', 0.5]
+    p2: ['tsOfs12', 0.5]
+    preshape:   [0.4680, 0.6522, 1.0691, 0.1169, 0.2726, 0.8096, 0.5404, 1.0152, 0.3019, 0.9017, 0.5918, 0.1498, 1.2153, 0.0134, -0.1223, 0.7763]
+
+  p0_tsOfs123:  # book grasp
+    primitives: ['p0']
+    p0: ['tsOfs123', 1.0]
+    preshape:   [0.1773, 0.8352, 0.2315, -0.2327, 0.1213, 0.8785, 0.2752, -0.2656, 0.2482, 0.9761, 0.0469, -0.2883, 1.4512, 0.0445, -0.2611, 0.3382]
+
+  p0_tsOfs12:  # scissor
+    primitives: ['p0']
+    p0: ['tsOfs12', 1.0]
+    preshape:   [0.5648, 1.0733, 0.3681, -0.2778, 0.3295, 1.1574, 0.2226, -0.2416, -0.0355, 1.1939, 0.1253, -0.2367, 1.2265, 0.0902, 0.0492, 0.4134]
+
+  p0_pOfs23/p1_tsOs2/p2_ttOft1:  # hammering / cutting
+    primitives: ['p0', 'p1', 'p2']
+    p0: ['pOfs23', 1.0]
+    p1: ['tsOs2', 0.5]
+    p2: ['ttOft1', 0.5]
+    preshape:   [0.5619, 0.4983, 0.2875, 0.3834, -0.0832, 0.4440, 0.8970, 0.1544, 0.1641, 0.5923, 0.4966, 0.2363, 0.9630, 0.4642, -0.03401, 0.7641]
+
+  p0_pOf23/p1_pOfs1/p2_tsOs1:  # jug handle
+    primitives: ['p0', 'p1', 'p2']
+    p0: ['pOfs23', 1.0]
+    p1: ['pOfs1', 0.5]
+    p2: ['tsOs1', 0.5]
+    preshape:   [0.1614, 0.7945, 0.5325, 0.3193, 0.0032, 0.9652, 0.5876, 0.1377, 0.0647, 1.0251, 0.6210, 0.0478, 0.2258, 0.3304, 0.2326, 0.7341]
+
+  p0_pOf23/p1_tsOs1:  # pan handle
+    primitives: ['p0', 'p1']
+    p0: ['pOfs23', 1.0]
+    p1: ['tsOs1', 1.0]
+    preshape:   [-0.4313, 0.5278, 1.6427, 0.5769, -0.2234, 1.3708, 0.8127, 0.0915, -0.0132, 1.6765, 0.3693, 0.0188, 0.7655, -0.0264, 0.5083, 0.5170]
+
+  p0_tsOs12:  # lateral power
+    primitives: ['p0']
+    p0: ['tsOs12', 1.0]
+    preshape:   [-0.5616, 1.2179, 1.6502, 1.2253, -0.4010, 1.5467, 0.9140, 0.6226, -0.1193, 1.0115, 0.5661, 0.7920, 0.4492, 0.4349, 0.2206, 0.8021]  
+
+  p0_tsOs2/p1_ttOp/p2_pOfs1:  # power sphere lateral small diameter
+    primitives: ['p0', 'p1', 'p2']
+    p0: ['tsOs2', 0.8]
+    p1: ['ttOp', 0.2]
+    p2: ['pOfs1', 1.0]
+    preshape:   [-0.0056, 0.4517, 0.5617, 0.1303, -0.3565, 1.3276, 1.0750, 0.3350, -0.1931, 1.4467, 0.4081, 0.3376, 0.7370, 0.5069, 0.3890, 0.2706]
+  
+  p0_tsOs3/p1_ttOp/p2_pOfs12:  # power sphere lateral large diameter
+    primitives: ['p0', 'p1', 'p2']
+    p0: ['tsOs3', 0.8]
+    p1: ['ttOp', 0.2]
+    p2: ['pOfs12', 1.0]
+    preshape:   [0.0254, 0.4628, 0.6046, -0.1395, 0.0781, 0.4083, 0.5934, 0.1606, -0.3246, 1.6199, 0.5897, 0.2913, 0.9977, 0.5997, -0.1784, 0.4474]
+
+  p0_tsOs2/p1_pOfs1:  # open cap
+    primitives: ['p0', 'p1']
+    p0: ['tsOs2', 1.0]
+    p1: ['pOfs1', 1.0]
+    preshape:   [-0.02618, 0.1749, 1.3223, -0.3025, -0.5382, 1.7184, 1.2671, 0.8323, -0.3288, 1.2531, 0.6663, 0.6138, 0.5020, 0.5085, 0.5034, 0.4962]
