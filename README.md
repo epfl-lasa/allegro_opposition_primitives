@@ -60,7 +60,9 @@ Predefined grasps
 -----------------
 The package predefines a set of grasps which can be selected for execution according to the task being performed. These are shown below.
 
-- put the image here, the human hand demonstrating the grasp. the corresponding grasp with the allegro hand.
+Grasp name 			| 			preshape 								| 		Closed
+---------- 			| 			-------- 								| 		------
+ Precision Pinch 	| ![alt tag](img/precision_pinch_preshape.png)		| ![alt tag](img/precision_pinch_closed.png)
 
 
 Defining new grasps
