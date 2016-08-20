@@ -62,7 +62,7 @@ The package predefines a set of grasps which can be selected for execution accor
 
 Grasp name 			| 			preshape 								| 		Closed
 ---------- 			| 			-------- 								| 		------
- Precision Pinch 	| ![alt tag](img/precision_pinch_preshape.png)		| ![alt tag](img/precision_pinch_closed.png)
+ Precision Pinch 	| ![alt tag](img/precision_pinch_preshape.JPG)		| ![alt tag](img/precision_pinch_closed.JPG)
 
 
 Defining new grasps
