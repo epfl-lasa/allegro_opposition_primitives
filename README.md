@@ -60,21 +60,21 @@ Predefined grasps
 -----------------
 The package predefines a set of grasps which can be selected for execution according to the task being performed. These are shown below.
 
-Grasp name 				| primitive description						|	preshape 											| 		Closed 											|    examples	
----------- 				| ---------------------						|   ------												|		------ 											|    ----------
-Precision Pinch 		| ttOft12									| ![alt tag](img/precision_pinch_preshape.JPG)			| ![alt tag](img/precision_pinch_closed.JPG)    		|
-Writing Tripod	 		| ttOs2tip / ttOft1 / ft1Os2				| ![alt tag](img/writing_tripod_preshape.JPG)			| ![alt tag](img/writing_tripod_closed.JPG)				|
-Precision Tap	 		| ttOs1/ ttOft2								| ![alt tag](img/precision_tap_preshape.JPG)			| ![alt tag](img/precision_tap_closed.JPG)				|
-Book Grasp	 			| tsOfs123									| ![alt tag](img/book_grasp_preshape.JPG)				| ![alt tag](img/book_grasp_closed.JPG)					|
-Cutting/Hammering		| pOfs23 / tsOs2 / ttOft1					| ![alt tag](img/cutting_hammering_preshape.JPG)		| ![alt tag](img/cutting_hammering_closed.JPG)			|
-Jug Handle				| pOf23 / pOfs1 / tsOs1						| ![alt tag](img/jug_handle_preshape.JPG)				| ![alt tag](img/jug_handle_closed.JPG)					|
-Pan Handle				| pOf23 / tsOs1								| ![alt tag](img/pan_handle_preshape.JPG)				| ![alt tag](img/pan_handle_closed_1.JPG)  				| ![alt tag](img/pan_handle_closed_2.JPG)
-Open Cap 				| tsOs2 / pOfs1								| ![alt tag](img/open_cap_preshape.JPG)					| ![alt tag](img/open_cap_closed.JPG)					|
-Power Cylinder 			| tsOfs123 / ttOp / pOft123					| ![alt tag](img/power_cylinder_3_finger_preshape.JPG)	| ![alt tag](img/power_cylinder_3_finger_closed.JPG)	|
-Power Sphere 			| tsOfs123 / ttOp / pOft123					| ![alt tag](img/power_sphere_3_finger_preshape.JPG)	| ![alt tag](img/power_sphere_3_finger_closed_1.JPG)	| ![alt tag](img/power_sphere_3_finger_closed_2.JPG)
-Lateral Clamp 			| tsOs12									| ![alt tag](img/lateral_clamp_preshape.JPG)			| ![alt tag](img/lateral_clamp_closed.JPG)				|
-Power Sphere Lateral Small Diameter | tsOs2 / ttOp / pOfs1  		| ![alt tag](img/power_sphere_lateral_smalldiameter_preshape.JPG) | ![alt tag](img/power_sphere_lateral_smalldiameter_closed.JPG)	|
-Power Sphere Lateral Large Diameter | tsOs3 / ttOp / pOfs12  		| ![alt tag](img/power_sphere_lateral_largediameter_preshape.JPG) | ![alt tag](img/power_sphere_lateral_largediameter_closed.JPG)	|
+Grasp name 				| primitive description						|	preshape 											| 		Closed 											|    examples	|    examples	|    examples	
+---------- 				| ---------------------						|   ------												|		------ 											|    ---------- |    ---------- |    ----------
+Precision Pinch 		| ttOft12									| ![alt tag](img/precision_pinch_preshape.JPG)			| ![alt tag](img/precision_pinch_closed.JPG)    		| | |
+Writing Tripod	 		| ttOs2tip / ttOft1 / ft1Os2				| ![alt tag](img/writing_tripod_preshape.JPG)			| ![alt tag](img/writing_tripod_closed.JPG)				| | |
+Precision Tap	 		| ttOs1/ ttOft2								| ![alt tag](img/precision_tap_preshape.JPG)			| ![alt tag](img/precision_tap_closed.JPG)				| | |
+Book Grasp	 			| tsOfs123									| ![alt tag](img/book_grasp_preshape.JPG)				| ![alt tag](img/book_grasp_closed.JPG)					| | |
+Cutting/Hammering		| pOfs23 / tsOs2 / ttOft1					| ![alt tag](img/cutting_hammering_preshape.JPG)		| ![alt tag](img/cutting_hammering_closed.JPG)			| | |
+Jug Handle				| pOf23 / pOfs1 / tsOs1						| ![alt tag](img/jug_handle_preshape.JPG)				| ![alt tag](img/jug_handle_closed.JPG)					| | |
+Pan Handle				| pOf23 / tsOs1								| ![alt tag](img/pan_handle_preshape.JPG)				| ![alt tag](img/pan_handle_closed_1.JPG)  				| ![alt tag](img/pan_handle_closed_2.JPG)  | ![alt tag](img/pan_handle_closed_3.JPG)  | ![alt tag](img/pan_handle_closed_4.JPG) 
+Open Cap 				| tsOs2 / pOfs1								| ![alt tag](img/open_cap_preshape.JPG)					| ![alt tag](img/open_cap_closed.JPG)					| | |
+Power Cylinder 			| tsOfs123 / ttOp / pOft123					| ![alt tag](img/power_cylinder_3_finger_preshape.JPG)	| ![alt tag](img/power_cylinder_3_finger_closed.JPG)	| | |
+Power Sphere 			| tsOfs123 / ttOp / pOft123					| ![alt tag](img/power_sphere_3_finger_preshape.JPG)	| ![alt tag](img/power_sphere_3_finger_closed_1.JPG)	| ![alt tag](img/power_sphere_3_finger_closed_2.JPG) | 
+Lateral Clamp 			| tsOs12									| ![alt tag](img/lateral_clamp_preshape.JPG)			| ![alt tag](img/lateral_clamp_closed.JPG)				| | |
+Power Sphere Lateral Small Diameter | tsOs2 / ttOp / pOfs1  		| ![alt tag](img/power_sphere_lateral_smalldiameter_preshape.JPG) | ![alt tag](img/power_sphere_lateral_smalldiameter_closed.JPG)	| | |
+Power Sphere Lateral Large Diameter | tsOs3 / ttOp / pOfs12  		| ![alt tag](img/power_sphere_lateral_largediameter_preshape.JPG) | ![alt tag](img/power_sphere_lateral_largediameter_closed.JPG)	| | |
 
 
 Defining new grasps
