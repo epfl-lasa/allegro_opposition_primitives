@@ -73,8 +73,8 @@ Open Cap 				| tsOs2 / pOfs1								| ![alt tag](img/open_cap_preshape.JPG)					
 Power Cylinder 			| tsOfs123 / ttOp / pOft123					| ![alt tag](img/power_cylinder_3_finger_preshape.JPG)	| ![alt tag](img/power_cylinder_3_finger_closed.JPG)	|
 Power Sphere 			| tsOfs123 / ttOp / pOft123					| ![alt tag](img/power_sphere_3_finger_preshape.JPG)	| ![alt tag](img/power_sphere_3_finger_closed.JPG)		|
 Lateral Clamp 			| tsOs12									| ![alt tag](img/lateral_clamp_preshape.JPG)			| ![alt tag](img/lateral_clamp_closed.JPG)				|
-Power Sphere Lateral Small Diameter | tsOs2 / ttOp / pOfs1  		| ![alt tag](img/power_sphere_lateral_small_diameter_preshape.JPG) | ![alt tag](img/power_sphere_lateral_small_diameter_closed.JPG)	|
-Power Sphere Lateral Large Diameter | tsOs3 / ttOp / pOfs12  		| ![alt tag](img/power_sphere_lateral_large_diameter_preshape.JPG) | ![alt tag](img/power_sphere_lateral_large_diameter_closed.JPG)	|
+Power Sphere Lateral Small Diameter | tsOs2 / ttOp / pOfs1  		| ![alt tag](img/power_sphere_lateral_smalldiameter_preshape.JPG) | ![alt tag](img/power_sphere_lateral_smalldiameter_closed.JPG)	|
+Power Sphere Lateral Large Diameter | tsOs3 / ttOp / pOfs12  		| ![alt tag](img/power_sphere_lateral_largediameter_preshape.JPG) | ![alt tag](img/power_sphere_lateral_largediameter_closed.JPG)	|
 
 
 Defining new grasps
