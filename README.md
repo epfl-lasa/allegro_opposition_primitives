@@ -60,10 +60,10 @@ Predefined grasps
 -----------------
 The package predefines a set of grasps which can be selected for execution according to the task being performed. These are shown below.
 
-Grasp name 			| 			preshape 								| 		Closed
----------- 			| 			-------- 								| 		------
- Precision Pinch 	| ![alt tag](img/precision_pinch_preshape.JPG)		| ![alt tag](img/precision_pinch_closed.JPG)
- Writing Tripod	 	| ![alt tag](img/writing_tripod_preshape.JPG)		| ![alt tag](img/writing_tripod_closed.JPG)
+Grasp name 			| primitive description						|	preshape 										| 		Closed
+---------- 			| ---------------------						|   ------											|		------
+ Precision Pinch 	| ttOft12									| ![alt tag](img/precision_pinch_preshape.JPG)		| ![alt tag](img/precision_pinch_closed.JPG)
+ Writing Tripod	 	| ttOs2tip / ttOft1 / ft1Os2				| ![alt tag](img/writing_tripod_preshape.JPG)		| ![alt tag](img/writing_tripod_closed.JPG)
 
 
 Defining new grasps
