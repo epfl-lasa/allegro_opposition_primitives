@@ -62,8 +62,11 @@ The package predefines a set of grasps which can be selected for execution accor
 
 Grasp name 			| primitive description						|	preshape 										| 		Closed
 ---------- 			| ---------------------						|   ------											|		------
- Precision Pinch 	| ttOft12									| ![alt tag](img/precision_pinch_preshape.JPG)		| ![alt tag](img/precision_pinch_closed.JPG)
- Writing Tripod	 	| ttOs2tip / ttOft1 / ft1Os2				| ![alt tag](img/writing_tripod_preshape.JPG)		| ![alt tag](img/writing_tripod_closed.JPG)
+Precision Pinch 	| ttOft12									| ![alt tag](img/precision_pinch_preshape.JPG)		| ![alt tag](img/precision_pinch_closed.JPG)
+Writing Tripod	 	| ttOs2tip / ttOft1 / ft1Os2				| ![alt tag](img/writing_tripod_preshape.JPG)		| ![alt tag](img/writing_tripod_closed.JPG)
+Precision Tap	 	| ttOs1/ ttOft2								| ![alt tag](img/precision_tap_preshape.JPG)		| ![alt tag](img/precision_tap_closed.JPG)
+Book Grasp	 		| tsOfs123									| ![alt tag](img/book_grasp_preshape.JPG)			| ![alt tag](img/book_grasp_closed.JPG)
+Cutting/Hammering	| tsOfs123									| ![alt tag](img/cutting_hammering_preshape.JPG)	| ![alt tag](img/cutting_hammering_closed.JPG)
 
 
 Defining new grasps
