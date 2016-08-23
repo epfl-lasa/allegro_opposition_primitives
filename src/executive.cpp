@@ -67,7 +67,7 @@ void Executive::initController() {
     lib_cmd_pub = nh.advertise<std_msgs::String>(LIB_CMD_TOPIC, 3);
     control_cmd_pub = nh.advertise<std_msgs::String>(CONTROL_TOPIC, 3);
 
-    initGravCompHack();
+    //initGravCompHack();
 
     enableJointControl();
     graspName = "";
@@ -326,7 +326,6 @@ void Executive::setJointStateCallback(const sensor_msgs::JointState &msg) {
     mutex->unlock();
 }
 
-
 void Executive::updateController() {
     // update latest joint state.
     mutex->lock();
@@ -350,11 +349,14 @@ void Executive::updateController() {
         }
     }
     else {
+        gravcomp->setTarget();
         for (int i=0; i<DOF_JOINTS; i++) {
             cntrl_joint_state.effort[i] = gravcomp->control_torque[i];
+            std::cout << cntrl_joint_state.effort[i] << " ";
             for (int j=0; j<controllers.size(); j++)
                 cntrl_joint_state.effort[i] += (controllers[j]->getControlTorque())[i] * controllers[j]->mix_factor;
         }
+        std::cout << std::endl;
     }
 
     cmd_pub.publish(cntrl_joint_state);
