@@ -5,6 +5,7 @@ std::map<std::string, PatchInfo> patchInfo;
 std::map<std::string, std::string> patchNameMap = {
     {"thumb_tip", "link_15.0_tip"},
     {"thumb_dist", "link_15.0"},
+    {"thumb_dist_side", "link_15.0_side"},
     {"thumb_mid", "link_14.0"},
 
     {"index_tip", "link_3.0_tip"},
@@ -39,7 +40,9 @@ std::map<std::string, std::string> patchNameMap = {
     {"palm_mid_dgt",  "palm_link_m.dist"},
     {"palm_mid_wrst", "palm_link_m.prox"},
     {"palm_pky_dgt",  "palm_link_r.dist"},
-    {"palm_pky_wrst", "palm_link_r.prox"}
+    {"palm_pky_wrst", "palm_link_r.prox"},
+
+    {"palm_ext", "palm_link_ext"},
 };
 
 PatchInfo::PatchInfo() {
@@ -86,6 +89,10 @@ void initPatchInfo() {
     t3.joint_map.push_back(eJOINTNAME_THUMB_2); t3.joint_effort_mask.push_back(t_on_r_off);
     t3.joint_map.push_back(eJOINTNAME_THUMB_3); t3.joint_effort_mask.push_back(t_on_r_off);
     t3.patch_extension.push_back(KDL::Segment("15.0_15.0", KDL::Joint(KDL::Joint::None), KDL::Frame( KDL::Rotation::Identity(), KDL::Vector(0.0, 0.0, 0.003) )));
+    PatchInfo& t3_side = patchInfo["link_15.0_side"];
+    t3_side.copy(t3);
+    t3_side.patch_extension.push_back(KDL::Segment(KDL::Joint(KDL::Joint::None), KDL::Frame( KDL::Rotation::RotZ(KDL::deg2rad*-90.0), KDL::Vector(0.0, 0.0, 0.0) )));
+
 
     PatchInfo& t2 = patchInfo["link_14.0"];
     t2.name = "link_14.0";
@@ -259,6 +266,9 @@ void initPatchInfo() {
     pdistr.name = "palm_link";
     pdistr.patch_extension.push_back(KDL::Segment("palm_link_r.dist", KDL::Joint(KDL::Joint::None), KDL::Frame( KDL::Rotation::Identity(), KDL::Vector(0.013, -0.045, -0.045) )));
 
+    PatchInfo& pext = patchInfo["palm_link_ext"];
+    pext.name = "palm_link";
+    pext.patch_extension.push_back(KDL::Segment("palm_link_ext", KDL::Joint(KDL::Joint::None), KDL::Frame( KDL::Rotation::Identity(), KDL::Vector(0.013, 0.1, -0.03) )));
 
 //    for (std::map<std::string, PatchInfo>::iterator it = patchInfo.begin(); it != patchInfo.end(); ++it)
 //        std::cerr << (*it).second.name << std::endl;
