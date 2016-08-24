@@ -43,7 +43,6 @@ public:
     void controlCommandCallback(const std_msgs::String &msg);
     void broadcastPatchTF(std::vector<Patch>& patches);
     bool detectContact();
-    KDL::Tree& getTree() {return my_tree; }
 
     void printPrimitiveDef(const std::string& name, XmlRpc::XmlRpcValue& def);
 
@@ -163,14 +162,6 @@ public:
     GravCompController(Executive *ce, Primitive *primitive=(Primitive *)NULL);
     void updateControlTorque() {}
     void setTarget();
-    void setGravityVector(KDL::Vector& gvec);
-
-private:
-    void addChain(std::string name, KDL::Vector& gravity);
-
-    std::vector<Patch> tips;
-    std::vector<KDL::JntArray> gtorque;
-    std::vector<KDL::ChainDynParam*> gDynParams;
 };
 
 class PrimitiveController {
