@@ -67,7 +67,7 @@ void Executive::initController() {
     lib_cmd_pub = nh.advertise<std_msgs::String>(LIB_CMD_TOPIC, 3);
     control_cmd_pub = nh.advertise<std_msgs::String>(CONTROL_TOPIC, 3);
 
-    initGravCompHack();
+    //initGravCompHack();
 
     enableJointControl();
     graspName = "";
@@ -213,13 +213,13 @@ void Executive::reconfigureCallback(allegro_opposition_primitives::my_dyn_params
         for (std::vector<PrimitiveController*>::iterator it = controllers.begin(); it != controllers.end(); ++it) {
             (*it)->setSqueezeLevel(config.squeeze_level);
             (*it)->setCloseLevel(config.close_level);
-//            (*it)->setMixFactor(config.mix_factor);
+            (*it)->setMixFactor(config.mix_factor);
         }
     }
     else {
         controllers[config.primitive]->setSqueezeLevel(config.squeeze_level);
         controllers[config.primitive]->setCloseLevel(config.close_level);
-//        controllers[config.primitive]->setMixFactor(config.mix_factor);
+        controllers[config.primitive]->setMixFactor(config.mix_factor);
     }
     mutex->unlock();
 
@@ -349,7 +349,7 @@ void Executive::updateController() {
         }
     }
     else {
-        //gravcomp->setTarget();
+        gravcomp->setTarget();
         for (int i=0; i<DOF_JOINTS; i++) {
             cntrl_joint_state.effort[i] = gravcomp->control_torque[i];
             std::cout << cntrl_joint_state.effort[i] << " ";

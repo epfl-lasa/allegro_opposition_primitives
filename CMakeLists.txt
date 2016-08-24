@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   allegro_hand_description
   allegro_hand_driver
   allegro_hand_parameters
+  impedance_controller
   kdl_parser
   roscpp
   rospy
@@ -119,7 +120,7 @@ generate_dynamic_reconfigure_options(
 catkin_package(
   INCLUDE_DIRS include
 #  LIBRARIES ${PROJECT_NAME}
-  CATKIN_DEPENDS message_runtime dynamic_reconfigure allegro_hand_controllers allegro_hand_description allegro_hand_driver allegro_hand_parameters eigen_conversions roscpp rospy
+  CATKIN_DEPENDS message_runtime dynamic_reconfigure allegro_hand_controllers allegro_hand_description allegro_hand_driver allegro_hand_parameters impedance_controller eigen_conversions roscpp rospy
   DEPENDS system_lib Eigen
 )
 
